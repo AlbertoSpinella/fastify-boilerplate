@@ -12,6 +12,10 @@ fastify.register(require("./src/plugins/index"), {
     prefix: "/index"
 });
 
+fastify.register(require("./src/plugins/calculator"), {
+    prefix: "/calculate"
+});
+
 
 const PORT = 3000;
 
