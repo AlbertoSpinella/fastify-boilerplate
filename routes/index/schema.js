@@ -1,7 +1,7 @@
 const {
     getIndex,
     postIndex
-} = require("../controllers/index");
+} = require("./controller");
 
 const getIndexOpts = {
     schema: {

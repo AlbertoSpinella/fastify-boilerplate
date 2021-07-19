@@ -1,7 +1,7 @@
 const {
     getIndexOpts,
     postIndexOpts
-} = require("../schemas/index");
+} = require("./schema");
 
 const indexRoutes = (fastify, options, done) => {
     try {

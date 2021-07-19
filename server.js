@@ -8,7 +8,7 @@ fastify.register(require("fastify-swagger"), {
     },
 });
 
-fastify.register(require("./src/plugins/index"), {
+fastify.register(require("./routes/index/plugin"), {
     prefix: "/index"
 });
 
