@@ -1,9 +1,9 @@
-const {
+import {
     plusCalculatorOpts,
     minusCalculatorOpts
-} = require("./schema");
+} from "./schema.js";
 
-const calculatorRoutes = (fastify, options, done) => {
+export const calculatorPlugin = (fastify, options, done) => {
     try {
         fastify.post("/plus", plusCalculatorOpts);
         fastify.post("/minus", minusCalculatorOpts);
@@ -13,5 +13,3 @@ const calculatorRoutes = (fastify, options, done) => {
         throw err;
     }
 };
-
-module.exports = calculatorRoutes;

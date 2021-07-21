@@ -1,9 +1,9 @@
-const {
+import {
     getIndex,
     postIndex
-} = require("./controller");
+} from "./controller.js";
 
-const getIndexOpts = {
+export const getIndexOpts = {
     schema: {
         response: {
             200: {
@@ -14,7 +14,7 @@ const getIndexOpts = {
     handler: getIndex
 };
 
-const postIndexOpts = {
+export const postIndexOpts = {
     schema: {
         body: {
             type: "object",
@@ -31,8 +31,3 @@ const postIndexOpts = {
     },
     handler: postIndex
 };
-
-module.exports = {
-    getIndexOpts,
-    postIndexOpts
-}

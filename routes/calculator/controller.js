@@ -1,4 +1,4 @@
-const plusCalculator = (req, res) => {
+export const plusCalculator = (req, res) => {
     try {
         const { a, b } = req.body;
         const plus = a + b;
@@ -8,7 +8,7 @@ const plusCalculator = (req, res) => {
     }
 };
 
-const minusCalculator = (req, res) => {
+export const minusCalculator = (req, res) => {
     try {
         const { a, b } = req.body;
         const minus = a - b;
@@ -17,8 +17,3 @@ const minusCalculator = (req, res) => {
         throw err;
     }
 };
-
-module.exports = {
-    plusCalculator,
-    minusCalculator
-}

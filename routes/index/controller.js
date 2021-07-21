@@ -1,4 +1,4 @@
-const getIndex = (req, res) => {
+export const getIndex = (req, res) => {
     try {
         return res.send("Hello world!");
     } catch (err) {
@@ -6,7 +6,7 @@ const getIndex = (req, res) => {
     }
 };
 
-const postIndex = (req, res) => {
+export const postIndex = (req, res) => {
     try {
         const { name } = req.body;
         return res.send(`Hello ${name}!`);
@@ -14,8 +14,3 @@ const postIndex = (req, res) => {
         throw err;
     }
 };
-
-module.exports = {
-    getIndex,
-    postIndex
-}

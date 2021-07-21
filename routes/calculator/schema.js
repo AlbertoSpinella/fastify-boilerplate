@@ -1,7 +1,7 @@
-const {
+import {
     plusCalculator,
     minusCalculator
-} = require("./controller");
+} from "./controller.js";
 
 const Calculator = {
     body: {
@@ -19,17 +19,12 @@ const Calculator = {
     }
 }
 
-const plusCalculatorOpts = {
+export const plusCalculatorOpts = {
     schema: Calculator,
     handler: plusCalculator
 };
 
-const minusCalculatorOpts = {
+export const minusCalculatorOpts = {
     schema: Calculator,
     handler: minusCalculator
 };
-
-module.exports = {
-    plusCalculatorOpts,
-    minusCalculatorOpts
-}

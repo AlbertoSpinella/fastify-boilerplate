@@ -1,6 +1,10 @@
-const fastify = require("fastify")();
+import server  from "fastify";
+const fastify = server();
+import fastifySwagger from "fastify-swagger";
+import { indexPlugin } from "./routes/index/plugin.js";
+import { calculatorPlugin } from "./routes/calculator/plugin.js";
 
-fastify.register(require("fastify-swagger"), {
+fastify.register(fastifySwagger, {
     exposeRoute: true,
     routePrefix: "/docs",
     swagger: {
@@ -8,12 +12,12 @@ fastify.register(require("fastify-swagger"), {
     },
 });
 
-fastify.register(require("./routes/index/plugin"), {
+fastify.register(indexPlugin, {
     prefix: "/index"
 });
 
-fastify.register(require("./routes/calculator/plugin"), {
-    prefix: "/calculate"
+fastify.register(calculatorPlugin, {
+    prefix: "/calculator"
 });
 
 
