@@ -7,7 +7,12 @@ export const getIndexOpts = {
     schema: {
         response: {
             200: {
-                type: "string"
+                type: "object",
+                properties: {
+                    result: { type: "string" }
+                },
+                required: ["result"],
+                additionalProperties: false
             }
         }
     },
@@ -21,11 +26,17 @@ export const postIndexOpts = {
             required: ["name"],
             properties: {
                 name: { type: "string" }
-            }
+            },
+            additionalProperties: false
         },
         response: {
             200: {
-                type: "string"
+                type: "object",
+                properties: {
+                    result: { type: "string" }
+                },
+                required: ["result"],
+                additionalProperties: false
             }
         }
     },

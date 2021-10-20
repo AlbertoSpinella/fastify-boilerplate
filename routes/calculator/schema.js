@@ -3,18 +3,24 @@ import {
     minusCalculator
 } from "./controller.js";
 
-const Calculator = {
+export const Calculator = {
     body: {
         type: "object",
         required: ["a", "b"],
         properties: {
             a: { type: "number" },
             b: { type: "number" }
-        }
+        },
+        additionalProperties: false
     },
     response: {
         200: {
-            type: "number"
+            type: "object",
+            properties: {
+                "result": { type: "number" },
+            },
+            required: ["result"],
+            additionalProperties: false
         }
     }
 }

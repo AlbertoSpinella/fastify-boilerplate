@@ -8,7 +8,8 @@ const start = async () => {
         console.log(`Swagger can be found at http://localhost:${PORT}/docs`)
         await app.listen(PORT);
     } catch (error) {
-        fastify.log.error(error);
+        console.log(error);
+        app.log.error(error);
         process.exit(1);      
     }
 };
