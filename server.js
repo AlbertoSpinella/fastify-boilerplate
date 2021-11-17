@@ -1,12 +1,13 @@
 import app from "./app.js";
 
-const PORT = 3000;
+const port = 3000;
+const host = '0.0.0.0';
 
 const start = async () => {
     try {
         console.log(`Server starting...`);
-        console.log(`Swagger can be found at http://localhost:${PORT}/docs`)
-        await app.listen(PORT);
+        console.log(`Swagger can be found at http://localhost:${port}/docs`)
+        await app.listen({port, host});
     } catch (error) {
         console.log(error);
         app.log.error(error);
