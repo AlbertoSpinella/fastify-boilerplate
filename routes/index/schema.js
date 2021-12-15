@@ -10,9 +10,7 @@ export const getIndexOpts = {
                 type: "object",
                 properties: {
                     result: { type: "string" }
-                },
-                required: ["result"],
-                additionalProperties: false
+                }
             }
         }
     },
@@ -34,9 +32,7 @@ export const postIndexOpts = {
                 type: "object",
                 properties: {
                     result: { type: "string" }
-                },
-                required: ["result"],
-                additionalProperties: false
+                }
             }
         }
     },

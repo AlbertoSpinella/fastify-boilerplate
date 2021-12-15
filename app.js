@@ -9,7 +9,7 @@ app.register(fastifySwagger, {
     exposeRoute: true,
     routePrefix: "/docs",
     swagger: {
-        info: { title: "checksig-api" }
+        info: { title: "fastify-api" }
     },
 });
 
