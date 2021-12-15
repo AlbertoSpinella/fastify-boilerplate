@@ -1,9 +1,9 @@
-const {
+import {
     getIndexOpts,
     postIndexOpts
-} = require("../schemas/index");
+} from "./schema.js";
 
-const indexRoutes = (fastify, options, done) => {
+export const indexPlugin = (fastify, options, done) => {
     try {
         fastify.get("/", getIndexOpts);
         fastify.post("/", postIndexOpts);
@@ -13,5 +13,3 @@ const indexRoutes = (fastify, options, done) => {
         throw err;
     }
 };
-
-module.exports = indexRoutes;
