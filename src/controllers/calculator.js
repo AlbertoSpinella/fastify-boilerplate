@@ -21,4 +21,4 @@ const minusCalculator = (req, res) => {
 module.exports = {
     plusCalculator,
     minusCalculator
-}
+};

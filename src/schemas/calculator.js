@@ -17,7 +17,7 @@ const Calculator = {
             type: "number"
         }
     }
-}
+};
 
 const plusCalculatorOpts = {
     schema: Calculator,
@@ -32,4 +32,4 @@ const minusCalculatorOpts = {
 module.exports = {
     plusCalculatorOpts,
     minusCalculatorOpts
-}
+};

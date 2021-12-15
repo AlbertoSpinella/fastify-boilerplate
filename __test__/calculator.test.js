@@ -17,9 +17,9 @@ test('POST /calculator/plus', async () => {
     const body = {
         a: 1,
         b: 2
-    }
+    };
     expect(body).toMatchSchema(Calculator.body);
-    const response = await POST('/calculator/plus', {body});
+    const response = await POST('/calculator/plus', { body });
     const parsedBody = JSON.parse(response.body);
     expect(parsedBody).toMatchSchema(Calculator.response[200]);
     expect(response.statusCode).toBe(200);
@@ -29,9 +29,9 @@ test('POST /calculator/minus', async () => {
     const body = {
         a: 1,
         b: 2
-    }
+    };
     expect(body).toMatchSchema(Calculator.body);
-    const response = await POST('/calculator/minus', {body});
+    const response = await POST('/calculator/minus', { body });
     const parsedBody = JSON.parse(response.body);
     expect(parsedBody).toMatchSchema(Calculator.response[200]);
     expect(response.statusCode).toBe(200);

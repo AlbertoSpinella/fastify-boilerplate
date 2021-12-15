@@ -17,13 +17,13 @@ export const Calculator = {
         200: {
             type: "object",
             properties: {
-                "result": { type: "number" },
+                result: { type: "number" },
             },
             required: ["result"],
             additionalProperties: false
         }
     }
-}
+};
 
 export const plusCalculatorOpts = {
     schema: Calculator,

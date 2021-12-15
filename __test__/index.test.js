@@ -25,7 +25,7 @@ test('POST /index', async () => {
         name: "Alberto"
     };
     expect(body).toMatchSchema(postIndexOpts.schema.body);
-    const response = await POST('/index', {body});
+    const response = await POST('/index', { body });
     const parsedBody = JSON.parse(response.body);
     expect(parsedBody).toMatchSchema(postIndexOpts.schema?.response[200]);
     expect(response.statusCode).toBe(200);
