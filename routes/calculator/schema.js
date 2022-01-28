@@ -4,6 +4,7 @@ import {
 } from "./controller.js";
 
 export const Calculator = {
+    tags: ["CALCULATOR"],
     body: {
         type: "object",
         required: ["a", "b"],
@@ -16,10 +17,10 @@ export const Calculator = {
     response: {
         200: {
             type: "object",
+            required: ["result"],
             properties: {
                 result: { type: "number" },
             },
-            required: ["result"],
             additionalProperties: false
         }
     }

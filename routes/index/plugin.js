@@ -4,12 +4,8 @@ import {
 } from "./schema.js";
 
 export const indexPlugin = (fastify, options, done) => {
-    try {
-        fastify.get("/", getIndexOpts);
-        fastify.post("/", postIndexOpts);
+    fastify.get("/", getIndexOpts);
+    fastify.post("/", postIndexOpts);
 
-        done();
-    } catch (err) {
-        throw err;
-    }
+    done();
 };

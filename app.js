@@ -8,17 +8,17 @@ const app = Fastify();
 app.register(fastifySwagger, {
     exposeRoute: true,
     routePrefix: "/docs",
-    swagger: {
-        info: { title: "fastify-api" }
+    openapi: {
+        info: { title: "fastify-api", version: "0.1.0" },
+        tags: [
+            { name: "CALCULATOR", description: "Calculator API" },
+            { name: "INDEX", description: "Index API" }
+        ]
     },
 });
 
-app.register(indexPlugin, {
-    prefix: "/index"
-});
+app.register(indexPlugin, { prefix: "/index" });
 
-app.register(calculatorPlugin, {
-    prefix: "/calculator"
-});
+app.register(calculatorPlugin, { prefix: "/calculator" });
 
 export default app;
