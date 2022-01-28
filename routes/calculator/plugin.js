@@ -1,11 +1,11 @@
 import {
-    plusCalculatorOpts,
-    minusCalculatorOpts
+    plusCalculatorSchema,
+    minusCalculatorSchema
 } from "./schema.js";
 
 export const calculatorPlugin = (fastify, options, done) => {
-    fastify.post("/plus", plusCalculatorOpts);
-    fastify.post("/minus", minusCalculatorOpts);
+    fastify.post("/plus", plusCalculatorSchema);
+    fastify.post("/minus", minusCalculatorSchema);
 
     done();
 };

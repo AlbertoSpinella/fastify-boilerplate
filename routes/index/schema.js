@@ -3,7 +3,7 @@ import {
     postIndex
 } from "./controller.js";
 
-export const getIndexOpts = {
+export const getIndexSchema = {
     schema: {
         tags: ["INDEX"],
         response: {
@@ -19,7 +19,7 @@ export const getIndexOpts = {
     handler: getIndex
 };
 
-export const postIndexOpts = {
+export const postIndexSchema = {
     schema: {
         tags: ["INDEX"],
         body: {

@@ -8,7 +8,7 @@ const fake = app => {
     
         return app.inject(options);
     };
-    
+
     return {
         GET: http("GET"),
         POST: http("POST"),

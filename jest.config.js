@@ -4,7 +4,10 @@ const config =  {
     coverageDirectory: "coverage",
     coverageProvider: "v8",
     verbose: true,
-    // setupFilesAfterEnv: [""],
+    setupFilesAfterEnv: ["./libs/test/testSetup.js"],
+    testMatch: [
+        "**/__tests__/*.test.js"
+    ]
 };
 
 export default config;

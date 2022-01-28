@@ -26,12 +26,12 @@ export const Calculator = {
     }
 };
 
-export const plusCalculatorOpts = {
+export const plusCalculatorSchema = {
     schema: Calculator,
     handler: plusCalculator
 };
 
-export const minusCalculatorOpts = {
+export const minusCalculatorSchema = {
     schema: Calculator,
     handler: minusCalculator
 };

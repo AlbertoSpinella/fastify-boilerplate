@@ -1,11 +1,11 @@
 import {
-    getIndexOpts,
-    postIndexOpts
+    getIndexSchema,
+    postIndexSchema
 } from "./schema.js";
 
 export const indexPlugin = (fastify, options, done) => {
-    fastify.get("/", getIndexOpts);
-    fastify.post("/", postIndexOpts);
+    fastify.get("/", getIndexSchema);
+    fastify.post("/", postIndexSchema);
 
     done();
 };
