@@ -15,4 +15,4 @@ global.matchSchema = async (response, model, status) => {
         console.log(body);
         throw error;
     }
-}
+};

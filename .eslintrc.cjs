@@ -15,7 +15,6 @@ module.exports = {
     rules: {
         // from TSLint
         "@typescript-eslint/no-floating-promises": "off",
-        "indent": ["error", 4],
         "quotes": ["off"],
         "semi": ["error","always"],
         "linebreak-style": ["error", "unix"],
