@@ -160,7 +160,15 @@ const fastifySwagger = (fastify, opts, done) => {
 	fastify.route({
 		url: '/*',
 		method: 'GET',
-		schema: { hide: false },
+		schema: {
+            tags: ['docs'],
+            params: {
+                type: 'object',
+                properties: {
+                    wildcard: { type: 'string' }
+                }
+            }
+        },
 		...hooks,
 		handler: (req, reply) => {
 			const file = req.params['*'];
