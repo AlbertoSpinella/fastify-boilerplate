@@ -19,6 +19,7 @@ test('POST /calculator/plus', async () => {
     };
     const response = await HTTP.POST('/calculator/plus', { body });
     await matchSchema(response, plusCalculatorSchema, 200);
+    expect(response.json().result).toEqual(3);
 });
 
 test('POST /calculator/minus', async () => {
@@ -28,4 +29,5 @@ test('POST /calculator/minus', async () => {
     };
     const response = await HTTP.POST('/calculator/minus', { body });
     await matchSchema(response, minusCalculatorSchema, 200);
+    expect(response.json().result).toEqual(-1);
 });
